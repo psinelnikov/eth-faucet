@@ -30,4 +30,4 @@ COPY --from=backend /backend-build/eth-faucet /app/eth-faucet
 
 EXPOSE 8080
 
-ENTRYPOINT ["/app/eth-faucet"]
+ENTRYPOINT ["/app/eth-faucet", "-faucet.amount 0.1", "-faucet.symbol tMETIS"]
